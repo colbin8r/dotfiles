@@ -1,0 +1,17 @@
+{
+  "generator-kickoff:1.6.4": {
+    "promptValues": {
+      "features": [
+        "styleguide",
+        "flexboxFallback"
+      ],
+      "jsLibs": [
+        "lodash",
+        "lazysizes",
+        "attach",
+        "trak",
+        "swiftclick"
+      ]
+    }
+  }
+}
