@@ -19,25 +19,25 @@ Before this setup, I had all my dotfiles in a Dropbox folder, and I had to manua
 ### Installing
 
 Make sure Stow is installed:
-```
+```sh
 $ stow --help
 $ which stow
 ```
 
 If it's not, Stow is easy to install on Ubuntu:
-```
+```sh
 $ sudo apt-get install stow
 ```
 
 After that, change to the home directory, clone this repo, and `cd` into it:
-```
+```sh
 $ cd ~
 $ git clone https://github.com/colbin8r/dotfiles.git
 $ cd dotfiles
 ```
 
 From here, you just `stow` the configurations you want to use:
-```
+```sh
 $ stow bash
 $ stow zsh
 $ stow git
@@ -47,19 +47,19 @@ $ stow ...
 ### Uninstalling Configurations
 
 Make sure you're in your `dotfiles` directory:
-```
+```sh
 $ cd ~/dotfiles
 ```
 
 Run `stow -D [configuration]` to remove the configuration's symbolic links:
-```
+```sh
 $ stow -D zsh
 ```
 
 ### Updating Configurations
 
 You can pull down updates to configurations with Git. When a configuration in the `dotfiles` has changed, you need to manually re-stow it:
-```
+```sh
 $ cd ~/dotfiles
 $ git pull
 $ stow -R zsh
@@ -68,25 +68,25 @@ $ stow -R zsh
 ### Adding New Configurations
 
 New configurations are easy to add. Make a new folder in `dotfiles`:
-```
+```sh
 $ cd ~/dotfiles
 $ mkdir new-zsh-configuration
 ```
 
 Move the dotfiles from you home directory into the new configuration:
-```
+```sh
 $ mv ~/.zsh* dotfiles/new-zsh-configuration
 ```
 
 You can also move folders or parts of folders. For example, if you have a script that you want to be available in `~/bin`, just mimic the directory structure exactly in the configuration folder:
-```
+```sh
 $ cd ~/dotfiles/my-custom-script
 $ mkdir bin
 $ mv ~/bin/my-script bin
 ```
 
 Make sure to commit and push any new configurations:
-```
+```sh
 $ cd ~/dotfiles
 $ git add my-new-configuration/
 $ git commit -m 'Added my-new-configuration'
