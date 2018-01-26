@@ -8,7 +8,7 @@ The rest of this README is supposed to help me how to maintain, sync, and modify
 
 ## Usage
 
-I sync my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/) using [Brandon Invergo's](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) technique ([more reading](https://github.com/xero/dotfiles).
+I sync my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/) using [Brandon Invergo's](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) technique ([more reading](https://github.com/xero/dotfiles)).
 
 Inside your home directory lives a `dotfiles` folder. Inside `dotfiles`, you have folders to store each type of dotfile configuration you may want to use (e.g. `bash`, `zsh`, `git`, etc.). You can then `stow`/`stow -D` these configurations to add or remove them from you home directory's dotfiles. GNU Stow makes symlinks in your home director to these files.
 
