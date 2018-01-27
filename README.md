@@ -29,10 +29,10 @@ If it's not, Stow is easy to install on Ubuntu:
 $ sudo apt-get install stow
 ```
 
-After that, change to the home directory, clone this repo, and `cd` into it:
+After that, change to the home directory, clone this repo (which has submodules like `.oh-my-zsh`), and `cd` into it:
 ```sh
 $ cd ~
-$ git clone https://github.com/colbin8r/dotfiles.git
+$ git clone --recursive https://github.com/colbin8r/dotfiles.git
 $ cd dotfiles
 ```
 
