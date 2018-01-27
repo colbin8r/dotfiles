@@ -10,11 +10,11 @@ The rest of this README is supposed to help me how to maintain, sync, and modify
 
 I sync my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/) using [Brandon Invergo's](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) technique ([more reading](https://github.com/xero/dotfiles)).
 
-Inside your home directory lives a `dotfiles` folder. Inside `dotfiles`, you have folders to store each type of dotfile configuration you may want to use (e.g. `bash`, `zsh`, `git`, etc.). You can then `stow`/`stow -D` these configurations to add or remove them from you home directory's dotfiles. GNU Stow makes symlinks in your home director to these files.
+Inside your home directory lives a `dotfiles` folder. Inside `dotfiles`, you have folders to store each type of dotfile configuration you may want to use (e.g. `bash`, `zsh`, `git`, etc.). You can then `stow`/`stow -D` these configurations to add or remove them from you home directory's dotfiles. GNU Stow makes symlinks in your home directory to these files.
 
 This technique is portable, flexible, and maintainable. You can add or remove existing configurations on-the-fly, and new configurations are simple to add. Setting up a new machine's dotfiles is very straightforward, too.
 
-Before this setup, I had all my dotfiles in a Dropbox folder, and I had to manually symlink them every time. This setup is much easier to use.
+Before this setup, I had all my dotfiles in a Dropbox folder, and I had to manually symlink them every time. Needless to say, this setup is much easier to use. Now I have my dotfiles in source control, I can switch between multiple configurations for the same dotfiles, and Stow handles all the symlinking.
 
 ### Installing
 
@@ -29,10 +29,10 @@ If it's not, Stow is easy to install on Ubuntu:
 $ sudo apt-get install stow
 ```
 
-After that, change to the home directory, clone this repo, and `cd` into it:
+After that, change to the home directory, clone this repo (which has submodules like `.oh-my-zsh`), and `cd` into it:
 ```sh
 $ cd ~
-$ git clone https://github.com/colbin8r/dotfiles.git
+$ git clone --recursive https://github.com/colbin8r/dotfiles.git
 $ cd dotfiles
 ```
 
