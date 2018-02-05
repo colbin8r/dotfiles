@@ -3,3 +3,5 @@
 [user]
 	email = colbyrogness@gmail.com
 	name = Colby Rogness
+[push]
+	default = simple
