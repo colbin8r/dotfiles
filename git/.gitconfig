@@ -5,3 +5,7 @@
 	name = Colby Rogness
 [push]
 	default = simple
+[alias]
+	quick-stats = ! /usr/local/bin/git-quick-stats
+[credential]
+	helper = cache --timeout=3600
