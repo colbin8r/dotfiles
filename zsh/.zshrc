@@ -145,5 +145,6 @@ unset env
 
 # Use Pure prompt
 # https://github.com/sindresorhus/pure
-fpath=( "$HOME/pure" $fpath )
-
+fpath=( "$HOME/.zfunctions" $fpath )
+autoload -U promptinit; promptinit
+prompt pure
