@@ -639,3 +639,424 @@ npm start
 npm link
 npm unlink
 npm start
+ls
+cd ~
+pwd
+ln --help
+ln -s /mnt/c/dev
+ls
+cd dev
+pwd
+cd ../
+sudo apt-get install git
+git clone https://github.com/colbin8r/dotfiles.git
+cd dotfiles/
+git submodule update --init --recursive
+sudo apt-get install stow
+which stow
+sudo apt-get
+sudo apt-get install gnu-stow
+sudo apt-get update
+sudo apt-get install stow
+sudo apt autoremove
+ls
+stow bash
+cd ../
+ls
+ls -a
+mkdir dotfiles.bak
+mv .bash_history .bash_logout .bashrc dotfiles.bak/
+ls
+ls -a
+mv .profile dotfiles.bak/
+ls -a
+cd dotfiles
+stow bash
+ls
+ls -a
+ls
+ls -s
+ls -l
+stow fonts/
+stow git/
+stow hr/
+stow profile/
+stow sublime-text/
+stow yarn/
+stow yo
+stow zsh
+stow z-bash/
+ls
+sudo apt install thefuck
+ls
+cd wilee/
+ssh-add ~/.ssh/id_rsa
+ls
+ssh-keygen -t rsa -C "rrogness@perspectalabs.com" -b 4096
+xclip -sel clip < ~/.ssh/id_rsa.pub
+sudo apt instal lxclip
+sudo apt insall xclip
+sudo apt install xclip
+cat ~/.ssh/id_rsa.pub | clip
+cat ~/.ssh/id_rsa.pub 
+ls
+ls -la /mnt/c/Users/rrogness/.ssh
+ln -s ~/.ssh /mnt/c/Users/rrogness/.ssh
+ls
+ls -la /mnt/c/Users/rrogness/
+ls
+cd ~
+ls
+ln -s /mnt/c/Users/rrogness/
+ls
+cd /mnt/c/Users/rrogness/
+ls
+ls -la
+rm .ssh
+cp .ssh .
+cp ~/.ssh .
+ls -a
+cp ~/.ssh .ssh
+cp -R ~/.s~sh .
+cp -R ~/.ssh .
+ls -a
+cd ~/dev
+ls
+cd wilee/
+git clone git@nash.appcomsci.com:wilee/compose-admin.git
+git clone git@nash.appcomsci.com:wilee/threat-env.git
+git clone git@nash.appcomsci.com:wilee/threat-interpreter.git
+git clone git@nash.appcomsci.com:wilee/collectors.git
+git clone git@nash.appcomsci.com:wilee/daemon.git
+git clone git@nash.appcomsci.com:wilee/threat-db.git
+git clone git@nash.appcomsci.com:wilee/threat-detector.git
+git clone git@nash.appcomsci.com:wilee/threat-genper.git
+git clone git@nash.appcomsci.com:wilee/threat-match.git
+git clone git@nash.appcomsci.com:wilee/threats.git
+ssh-agent zsh
+ssh-agent bash
+ls -a
+cd /usr/bin/
+ls
+ls | grep thefu
+stat thefuck 
+cd ../share/thefuck/
+ls
+./thefuck
+./fuck 
+pip install thefuck
+sudo apt instal python-pip
+sudo apt install python-pip
+pip thefuck
+pip install
+pip install thefuck
+fuck
+lsb-release -a
+lsb_release -a
+which pip
+pip -v
+ls
+sudo apt-get install python3.7
+sudo add-apt-repository ppa:jonathonf/python-3.7
+sudo apt-get update
+which python3.7
+python -V
+python3
+python3.7
+sudo apt-get uninstall python3.5
+sudo apt-get remove python3.5
+which python
+which python3
+python
+which python
+which python3
+python
+python3 -D
+python3 -V
+sudo apt-get remove python3
+sudo apt-get remove python3.5
+sudo apt-get install python3.7
+sudo apt autoremove
+which python3
+python3 -V
+which python
+python -V
+python3.7 -V
+zshconfig
+cat ~/.zsh
+cat ~/.zshrc
+which python
+which python3
+python -V
+which python3
+python3 -V
+apt list --installed
+sudo apt remove python3-minimal python3.5-minimal
+sudo apt-get install python3.7
+which python
+which python3
+which python3.7
+cd ~
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3.7 get-pip.py 
+which pip3
+which pip3.7
+which pip37
+sudo python3.7 get-pip.py 
+which pip37
+sudo -H python3.7 get-pip.py 
+which pip
+which pip3
+which pip37
+which pip3.7
+sudo apt install python3-venv python3-pip
+pip install thefuck
+which python
+which pip
+sudo apt-get install python3
+sudo apt remove python3.7
+sudo apt --list
+sudo apt list
+sudo apt list --installed
+sudo apt remove python3.7-distutils && python3.7-lib2to3 && python3.7-minimal
+sudo apt-get install python python3
+sudo apt autoremove 
+which pip
+which pip3
+pip install thefuck
+/usr/local/bin/pip --help
+pip
+sudo apt-get install python3.7
+which pip
+/usr/local/bin/pip --help
+python3.7 -m pip uninstall pip setuptools
+sudo python3.7 -m pip uninstall pip setuptools
+sudo -H python3.7 -m pip uninstall pip setuptools
+sudo apt-get install python3
+sudo apt-get install python
+which python3
+which python
+which pip
+sudo apt install python-pip python3-venv python3-pip
+which pip
+which pip3
+sudo apt install python-pip python3-venv python3-pip
+which pip3
+which python3
+sudo apt install python3-venv python3-pip
+pip
+which pip
+command -v pip
+command -v pip3
+sudo apt remove python python3 python3-venv python-pip
+which python
+which python3
+which pip
+sudo apt update
+python -V
+python3 -V
+pip
+pip -V
+pip --help
+cd /usr/local/bin/
+ls
+ls -a
+which pip3
+which pip
+pip
+which python
+which python3
+sudo apt install python3 python python-pip python3-venv python3-pip
+which pip
+which pip3
+pip3 -V
+pip -V
+python -V
+python3 -V
+pip install thefuck
+which thefuck
+which thefuck
+command -v thefuck
+thefuck
+which thefuck
+thefuck
+thefuck --alias
+cat ~/.zshrc 
+pip list
+pip3 list
+pip3 install thefuck
+eval $(thefuck --alias)
+echo $PATH
+which thefuck
+cd /home/colbin8r/.local/bin/
+ls
+sudo apt-get install thefuck
+bash
+bash
+bash
+bash
+lx
+thefuck
+thefuck -v
+zshconfig
+which st
+echo $TEST_ENV
+echo $TEST_VAR
+echo $TEST_ENV
+echo $TEST_VAR
+chsh
+which zsh
+sudo apt-get install zsh
+which zsh
+python -V
+python3 -V
+python3.7 -V
+zshconfig
+nano ~/dotfiles/zsh/.zshrc 
+cd ~/dotfiles
+stow -R zsh/
+cat ~/.zshrc 
+nano .zshrc
+nano zsh/.zshrc
+stow -R zsh/
+cat ~/.zshrc 
+chsh
+nano zsh/.zshrc
+stow -R zsh/
+cd wilee/
+git clone git@nash.appcomsci.com:wilee/docs.git
+ssh-add ~/.ssh/id_rsa
+git clone git@nash.appcomsci.com:wilee/hunt-interface.git
+git clone git@nash.appcomsci.com:wilee/compose-daemon.git
+sudo apt-get instal python3
+sudo apt-get install python3
+sudo apt update
+which pip
+sudo apt install python3-pip
+which pip
+pip -v
+pip -V
+sudo apt uninstall python-pip2
+sudo apt remove python-pip2
+sudo apt list
+sudo apt install python-pip
+pip -V
+sudo apt install python-pip3
+sudo apt remove python-pip
+which pip
+which python
+python -v
+python --version
+sudo apt remove python
+sudo add-apt-repository ppa:jonathonf/python-3.7
+sudo apt-get update
+sudo apt-get install python3.7
+sudo apt-get install python
+python -v
+python -V
+sudo apt remove python
+sudo apt-get instal python3.7
+sudo apt-get install python3.7
+sudo add-apt-repository ppa:jonathonf/python-3.7
+
+sudo apt-get install python3.7
+sudo add-apt-repository ppa:jonathonf/python-3.7 && sudo apt-get update
+sudo apt-get install python3.7
+sudo apt-get install python3.6
+sudo apt-get install python3.7
+sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt-get update
+sudo apt-get install python37
+sudo apt-get install python3.7
+sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt-get update && sudo apt-get install python3.7
+command -v pip
+command -v python
+python -V
+sudo apt remove python
+which python
+sudo apt remove python2.7
+sudo apt autoremove
+which python
+which python3
+which pip
+which pip3
+sudo apt-get install python
+cd ~/dotfiles
+ls
+cd zsh/
+ls
+ls -a
+zshconfig
+nano .zshrc
+cd ../
+stow zsh
+stow -R zsh
+nano zsh/.zshrc
+stow -R zsh
+pip install thefuck
+which pip
+pip install thefuck
+nano zsh/.zshrc
+stow -R zsh
+nano zsh/.zshrc
+stow -R zsh
+nano zsh/.zshrc
+stow -R zsh
+nano zsh/.zshrc
+stow -R zsh
+nano zsh/.zshrc
+stow -R zsh
+cd zsh/
+ls -a
+cd .oh-my-zsh/
+ls
+cd plugins/
+ls
+cd thefuck/
+ls
+cat thefuck.plugin.zsh 
+cat README.md 
+cd ~/dotfiles
+ls
+nano zsh/.zshrc 
+stow -R zsh/
+nano zsh/.zshrc 
+stow -R zsh/
+nvm
+n
+which brew
+apt help
+apt search hub
+HUB_DIST=linux-amd64 HUB_VERSION=`curl -w "%{url_effective}\n" -I -L -s -S github.com/github/hub/releases/latest -o /dev/null | awk -F'releases/tag/v' '{ print $2 }'`; curl "https://github.com/github/hub/releases/download/v$HUB_VERSION/hub-$HUB_DIST-$HUB_VERSION.tgz" -L | tar xvz && sudo ./hub-$HUB_DIST-$HUB_VERSION/install && rm -r ./hub-$HUB_DIST-$HUB_VERSION
+ls
+ll
+which hub
+curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | zsh
+which zsh
+curl -s https://raw.githubusercontent.com/zaquestion/lab/master/install.sh | bash
+which lab
+lab
+git help clone
+cd ~/dev
+mkdir scattered
+cd scattered/
+lab
+lab help clone
+lab clone sedna/sedna-core
+lab clone scattered
+lab clone scattered/scattered
+lab clone scattered/scattered-docs
+lab clone scattered/common
+cd ~
+nano ~/.zshrc
+sudo echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
+su -
+sudo su root
+ll
+cd scattered/
+ll
+cd scattered
+./build-env.sh 
+less build-env.sh 

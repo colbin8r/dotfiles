@@ -1,5 +1,6 @@
 [core]
-	excludesfile = /home/colbin8r/.gitignore
+	excludesfile = /home/colbin8r/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
 	email = colbyrogness@gmail.com
 	name = Colby Rogness
@@ -9,3 +10,17 @@
 	quick-stats = ! /usr/local/bin/git-quick-stats
 [credential]
 	helper = cache --timeout=3600
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

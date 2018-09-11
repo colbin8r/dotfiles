@@ -10,6 +10,18 @@
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="avit"
 # ZSH_THEME="agnoster" # my favorite so far
+# ZSH_THEME="spaceship-prompt/spaceship" # a custom-installed theme
+ZSH_THEME="powerlevel9k/powerlevel9k" # a custom-installed theme
+
+# powerlevel9k prompt theme settings
+# https://github.com/bhilburn/powerlevel9k
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir_writable dir rbenv virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs time)
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_left"
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_last"
+
 ### disable to use the Pure prompt (see below)
 
 # Set list of themes to load
@@ -39,10 +51,10 @@
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -76,6 +88,13 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# To use the sublime Oh-My-ZSH plugin, you'll need a symlink to the executable in one of these locations:
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/sublime/sublime.plugin.zsh#L5
+# You can create one with:
+# ln -s "/mnt/c/PATH/TO/sublime_text.exe" ~/bin/sublime_text
+# for example:
+# ln -s "/mnt/c/Users/rrogness/Dropbox/Sublime Text/sublime_text.exe" ~/bin/sublime_text
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -93,7 +112,7 @@ export EDITOR='st'
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -102,7 +121,15 @@ export EDITOR='st'
 #
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
+alias zshreload="source ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
+alias subl="sublime_text"
+# Above alias also uses
+unsetopt BG_NICE
+# https://github.com/wting/autojump/issues/474
+#alias python="python3.7"
+#alias py="python"
+#alias pip="python3.7 -m pip"
 
 ######
 
@@ -111,9 +138,16 @@ cd ~/dev
 
 # removes Windows paths
 # https://github.com/Microsoft/WSL/issues/1493#issuecomment-346294379
-PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
+# PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
+# https://github.com/Microsoft/WSL/issues/1493#issuecomment-266432827
+# export PATH=`echo $PATH | tr ':' '\n' | grep -v /mnt/ | tr '\n' ':'`
+# https://github.com/Microsoft/WSL/issues/1493#issuecomment-395865226
+PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/(c|d)\// } split(/:/));')
 
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+
+# Add Python pip package binaries to PATH
+PATH="$PATH:/home/colbin8r/.local/bin"
 
 # Set DEFAULT_USER for agnoster theme
 # https://github.com/agnoster/agnoster-zsh-theme
@@ -145,6 +179,80 @@ unset env
 
 # Use Pure prompt
 # https://github.com/sindresorhus/pure
-fpath=( "$HOME/.zfunctions" $fpath )
-autoload -U promptinit; promptinit
-prompt pure
+#fpath=( "$HOME/.zfunctions" $fpath )
+#autoload -U promptinit; promptinit
+#prompt pure
+
+# Add ZSH completions folder
+fpath=(~/.zsh/completion $fpath)
+autoload -Uz compinit && compinit -i
+
+# Point Docker client to Windows Docker installation
+# DOCKER_HOST=tcp://localhost:2375
+export DOCKER_HOST=localhost:2375
+# https://blogs.msdn.microsoft.com/commandline/2017/12/08/cross-post-wsl-interoperability-with-docker/
+# Enabling below line will require a password prompt on every shell start, unless the sudoers file is modified appropriately
+# sudo -b ~/bin/docker-relay
+
+# To mount some volumes in docker, need to rebind /mnt/c to /c
+# https://github.com/Microsoft/WSL/issues/1854#issuecomment-291845122
+# sudo mkdir /c
+# sudo mount --bind /mnt/c /c
+
+# Docker compatability
+# mount /mnt/c to /c if not already done
+#if [ ! -d "/c" ] || [ ! "$(ls -A /c)" ]; then
+#  echo "Requiring root password to $(tput setaf 6)mount --bind /mnt/c /c$(tput sgr 0)"
+#  sudo mkdir -p /c
+#  sudo mount --bind /mnt/c /c
+#fi
+#
+# Change from /mnt/c/... to /c/...
+#if [ "$(pwd | cut -c -7)" = "/mnt/c/" ]; then
+#  cd "$(pwd | cut -c 5-)"
+#fi
+#
+# Provide docker for bash and docker-compose
+#docker() {
+#  "/c/Program Files/Docker/Docker/resources/bin/docker.exe" "$@"
+#}
+
+# Shorthand for `docker exec -it [container] /bin/bash`
+# into `db [container]`
+function db() {
+  docker exec -it $1 /bin/bash
+}
+
+# Shorthand for `docker kill [container]`
+# into `dk [container]`
+function dk() {
+  docker kill $1
+}
+
+# Stops all running docker containers
+# http://blog.baudson.de/blog/stop-and-remove-all-docker-containers-and-images
+function dkall() {
+  docker stop $(docker ps -aq)
+}
+
+# Shorthand for `docker ps`
+function dps() {
+  docker ps "$@"
+}
+
+# Shorthand for `docker inspect`
+function di() {
+  docker inspect "$@"
+}
+
+# Add $HOME/bin to path
+export PATH=$HOME/bin:$PATH
+
+# Python virtualenvwrapper configuration
+# (the command that provides "workon")
+# install with:
+# pip install --user virtualenvwrapper
+# https://virtualenvwrapper.readthedocs.io/en/latest/install.html#shell-startup-file
+export WORKON_HOME=$HOME/.venvs
+export PROJECT_HOME=/c/dev
+source $HOME/.local/bin/virtualenvwrapper.sh
