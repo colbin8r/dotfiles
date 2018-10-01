@@ -121,7 +121,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
-alias zshreload="source ~/.zshrc"
+#alias zshreload="source ~/.zshrc"
+alias zshreload="exec $SHELL -l"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 alias subl="sublime_text"
 # Above alias also uses
