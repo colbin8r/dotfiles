@@ -253,6 +253,6 @@ export PATH=$HOME/bin:$PATH
 # install with:
 # pip install --user virtualenvwrapper
 # https://virtualenvwrapper.readthedocs.io/en/latest/install.html#shell-startup-file
-export WORKON_HOME=$HOME/.venvs
-export PROJECT_HOME=/c/dev
-source $HOME/.local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=$HOME/.venvs
+# export PROJECT_HOME=/c/dev
+# source $HOME/.local/bin/virtualenvwrapper.sh
