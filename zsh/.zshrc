@@ -82,6 +82,7 @@ plugins=(
   z
   common-aliases
   zsh-syntax-highlighting
+  zsh-better-npm-completion
 )
 
 source $ZSH/oh-my-zsh.sh

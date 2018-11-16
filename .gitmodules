@@ -7,3 +7,7 @@
 [submodule "zsh/pure"]
 	path = zsh/pure
 	url = https://github.com/sindresorhus/pure
+[submodule "zsh/.oh-my-zsh/custom/plugins/zsh-better-npm-completion"]
+	path = zsh/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
+	url = https://github.com/lukechilds/zsh-better-npm-completion
+	branch = master
