@@ -1,6 +1,9 @@
 [submodule "zsh/pure"]
 	path = zsh/pure
 	url = https://github.com/sindresorhus/pure
+[submodule "zsh/.oh-my-zsh"]
+	path = zsh/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
 [submodule "zsh/.oh-my-zsh/custom/plugins/zsh-better-npm-completion"]
 	path = zsh/.oh-my-zsh/custom/plugins/zsh-better-npm-completion
 	url = https://github.com/lukechilds/zsh-better-npm-completion
@@ -11,6 +14,3 @@
 [submodule "zsh/zsh_custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/zsh_custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "zsh/.oh-my-zsh"]
-	path = zsh/.oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
