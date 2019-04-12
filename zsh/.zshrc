@@ -67,7 +67,7 @@ COMPLETION_WAITING_DOTS="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=$HOME/zsh_custom
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -122,7 +122,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 # Example aliases
 alias zshconfig="nano ~/.zshrc"
-alias zshreload="source ~/.zshrc"
+#alias zshreload="source ~/.zshrc"
+alias zshreload="exec $SHELL -l"
 alias ohmyzsh="nano ~/.oh-my-zsh"
 alias dc="docker-compose"
 alias subl="sublime_text"

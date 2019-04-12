@@ -4,17 +4,31 @@
 
 These are my personal dotfiles. I mainly work in the [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install-win10) using an Ubuntu distro.
 
-The rest of this README is supposed to help me how to maintain, sync, and modify them.
+The rest of this README is supposed to help me how to maintain, sync, and modify them. You are welcome to use anything here, but these instructions are mostly for me to remember how to set up a new system.
 
 ## Usage
 
 I sync my dotfiles with [GNU Stow](https://www.gnu.org/software/stow/) using [Brandon Invergo's](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) technique ([more reading](https://github.com/xero/dotfiles)).
 
-Inside your home directory lives a `dotfiles` folder. Inside `dotfiles`, you have folders to store each type of dotfile configuration you may want to use (e.g. `bash`, `zsh`, `git`, etc.). You can then `stow`/`stow -D` these configurations to add or remove them from you home directory's dotfiles. GNU Stow makes symlinks in your home directory to these files.
+Inside your home directory lives a `dotfiles` folder. Inside `dotfiles`, you have folders to store each type of dotfile configuration you may want to use (e.g. `bash`, `zsh`, `git`, etc.). You can then `stow`/`stow -D` these configurations to add or remove them from you home directory's dotfiles. GNU Stow makes symlinks in your home directory to these files (technically, it symlinks the files up a directory, meaning `dotfiles` *must* live in your home directory for the files to be symlinked into `~`).
 
 This technique is portable, flexible, and maintainable. You can add or remove existing configurations on-the-fly, and new configurations are simple to add. Setting up a new machine's dotfiles is very straightforward, too.
 
 Before this setup, I had all my dotfiles in a Dropbox folder, and I had to manually symlink them every time. Needless to say, this setup is much easier to use. Now I have my dotfiles in source control, I can switch between multiple configurations for the same dotfiles, and Stow handles all the symlinking.
+
+### A Note on the Windows Subsystem for Linux
+
+I use these dotfiles inside the Windows Subsystem for Linux (Ubuntu distro). They may or may not work for you out-of-the-box on other platforms (although I have used them successfully on OS X).
+
+I recommend you store your code, files, etc. in Windows and use them in WSL. WSL can read Windows files, but Windows cannot read WSL files, so you can use your files in both Windows (e.g. a code editor) and WSL (e.g. Nix tools, git, etc.).
+
+Also, I highly recommed you mount your Windows filesystem in Linux under `/c` rather than `/mnt/c` **with metadata** as that will allow you to use Windows directories easily in Linux. Sometimes Linux things need to connect to their Windows counterparts (e.g. the Sublime plugin for Oh My Zsh). You can do it quite easily by editing `/etc/wsl.conf` according to [these instructions](https://github.com/Microsoft/WSL/issues/1918#issuecomment-368269436).
+
+### A Note on Absolute Paths
+
+I'm in the process of converting some absolute paths I used when I started with these dotfiles. Not all of them may have been updated yet.
+
+To help WSL connect with Windows, I have a symlink to my Windows user directory within my WSL home directory: `~/colby -> /c/Users/colby/`. Some of the symlinks are pointed at this symlink, expecting it to resolve to a Windows home directory with specific concents. But when I move machines, I can just update the one symlink pointing at my Windows user and get the rest of them to work.
 
 ### Installing
 
