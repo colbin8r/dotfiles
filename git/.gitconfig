@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /home/colbin8r/.gitignore_global
+	excludesfile = /Users/colbin8r/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
 	email = colbyrogness@gmail.com
@@ -24,3 +24,11 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/colbin8r/.stCommitMsg
