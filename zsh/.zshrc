@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/colbin8r/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -124,6 +124,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 alias zshconfig="nano ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias ohmyzsh="nano ~/.oh-my-zsh"
+alias dc="docker-compose"
 alias subl="sublime_text"
 # Above alias also uses
 unsetopt BG_NICE
@@ -190,7 +191,7 @@ autoload -Uz compinit && compinit -i
 
 # Point Docker client to Windows Docker installation
 # DOCKER_HOST=tcp://localhost:2375
-export DOCKER_HOST=localhost:2375
+# export DOCKER_HOST=localhost:2375
 # https://blogs.msdn.microsoft.com/commandline/2017/12/08/cross-post-wsl-interoperability-with-docker/
 # Enabling below line will require a password prompt on every shell start, unless the sudoers file is modified appropriately
 # sudo -b ~/bin/docker-relay
@@ -246,6 +247,11 @@ function di() {
   docker inspect "$@"
 }
 
+# Shorthand for `mkdir [folder] && cd [folder]`
+function mkd() {
+  mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 # Add $HOME/bin to path
 export PATH=$HOME/bin:$PATH
 
@@ -254,6 +260,43 @@ export PATH=$HOME/bin:$PATH
 # install with:
 # pip install --user virtualenvwrapper
 # https://virtualenvwrapper.readthedocs.io/en/latest/install.html#shell-startup-file
-export WORKON_HOME=$HOME/.venvs
-export PROJECT_HOME=/c/dev
-source $HOME/.local/bin/virtualenvwrapper.sh
+# export WORKON_HOME=$HOME/.venvs
+# export PROJECT_HOME=/c/dev
+# source $HOME/.local/bin/virtualenvwrapper.sh
+
+# MacOS specific: use brew getopt
+# it can be installed with:
+# brew install gnu-getopt
+export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+
+# MacOS specific: use coreutils "readlink"
+# brew install coreutils
+alias readlink=greadlink
+
+# Use cht.sh CLI "cheat sheet" tool
+function cheat() {
+  curl cht.sh/$1
+}
+
+# Use an "extract" command to unzip files
+# https://news.ycombinator.com/item?id=18987485
+function extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1     ;;
+      *.tar.gz)    tar xzf $1     ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       unrar e $1     ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xf $1      ;;
+      *.tbz2)      tar xjf $1     ;;
+      *.tgz)       tar xzf $1     ;;
+      *.zip)       unzip $1       ;;
+      *.Z)         uncompress $1  ;;
+      *.7z)        7z x $1        ;;
+      *)     echo "'$1' cannot be extracted via extract()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
