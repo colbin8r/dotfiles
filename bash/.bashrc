@@ -201,3 +201,10 @@ export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PR
 # removes Windows paths
 # https://github.com/Microsoft/WSL/issues/1493#issuecomment-346294379
 PATH=$(/usr/bin/printenv PATH | /usr/bin/perl -ne 'print join(":", grep { !/\/mnt\/[a-z]/ } split(/:/));')
+
+# MacOS specific: use coreutils' readlink
+# brew install coreutils
+readlink () {
+  greadlink "$@"
+}
+
