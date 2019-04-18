@@ -79,7 +79,7 @@ plugins=(
   git-extras
   sublime
   thefuck
-  z
+  zsh-z
   common-aliases
   zsh-syntax-highlighting
   zsh-better-npm-completion
