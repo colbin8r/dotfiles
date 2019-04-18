@@ -25,7 +25,8 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-shopt -s globstar
+# Disable for now: no globstar on macOS
+# shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -154,7 +155,8 @@ export PYTHON="/usr/bin/python2.7"
 cd $HOME/dev
 
 # add .dircolors.monokai for colorization in 'ls'
-eval $(dircolors -b $HOME/.dir_colors)
+# dircolors isn't available on macOS, so disable for now: https://unix.stackexchange.com/questions/91937/mac-os-x-dircolors-not-found
+# eval $(dircolors -b $HOME/.dir_colors)
 
 # alias z to bin/z.sh script
 # https://github.com/rupa/z
