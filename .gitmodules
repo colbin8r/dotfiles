@@ -13,3 +13,6 @@
 [submodule "zsh/zsh_custom/plugins/zsh-better-npm-completion"]
 	path = zsh/zsh_custom/plugins/zsh-better-npm-completion
 	url = https://github.com/lukechilds/zsh-better-npm-completion
+[submodule "zsh/zsh_custom/plugins/zsh-z"]
+	path = zsh/zsh_custom/plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z
