@@ -19,3 +19,6 @@
 [submodule "zsh/zsh_custom/plugins/zsh-nvm"]
 	path = zsh/zsh_custom/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
+[submodule "zsh/zsh_custom/themes/spaceship-prompt"]
+	path = zsh/zsh_custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
