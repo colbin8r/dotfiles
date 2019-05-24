@@ -306,3 +306,8 @@ function extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+# Android SDK location on MacOS
+# https://docs.expo.io/versions/latest/workflow/android-studio-emulator/
+export ANDROID_SDK=/Users/colbin8r/Library/Android/sdk
+export PATH=/Users/colbin8r/Library/Android/sdk/platform-tools:$PATH
