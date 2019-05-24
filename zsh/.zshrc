@@ -87,6 +87,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-better-npm-completion
   zsh-nvm
+  transfer
 )
 
 source $ZSH/oh-my-zsh.sh
