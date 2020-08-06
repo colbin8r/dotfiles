@@ -18,3 +18,6 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export HOMEBREW_NO_ANALYTICS=1
+
+export PATH=/usr/local/Cellar/openssl/1.0.2t/bin:$PATH
