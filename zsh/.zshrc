@@ -15,7 +15,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k" # a custom-installed theme
 
 # powerlevel9k prompt theme settings
 # https://github.com/bhilburn/powerlevel9k
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir_writable dir rbenv virtualenv nvm vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context ssh dir_writable dir rbenv virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time root_indicator background_jobs time)
 POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
