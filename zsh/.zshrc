@@ -314,5 +314,10 @@ function extract () {
 # https://docs.expo.io/versions/latest/workflow/android-studio-emulator/
 export ANDROID_SDK=/Users/colbin8r/Library/Android/sdk
 export PATH=/Users/colbin8r/Library/Android/sdk/platform-tools:$PATH
+export PATH="/usr/local/sbin:$PATH"
+
+# Add Cargo to PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Add iTerm2 integration
 source ~/.iterm2_shell_integration.zsh
