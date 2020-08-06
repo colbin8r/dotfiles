@@ -316,6 +316,9 @@ export ANDROID_SDK=/Users/colbin8r/Library/Android/sdk
 export PATH=/Users/colbin8r/Library/Android/sdk/platform-tools:$PATH
 export PATH="/usr/local/sbin:$PATH"
 
+# Use Parallels provider with Vagrant - always
+export VAGRANT_DEFAULT_PROVIDER=parallels
+
 # Add Cargo to PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
