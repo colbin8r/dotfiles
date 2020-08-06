@@ -90,6 +90,7 @@ plugins=(
   yarn
   zsh-nvm
   transfer
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
