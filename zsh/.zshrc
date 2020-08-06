@@ -87,6 +87,7 @@ plugins=(
   zsh-aliases-exa
   zsh-syntax-highlighting
   zsh-better-npm-completion
+  yarn
   zsh-nvm
   transfer
 )
