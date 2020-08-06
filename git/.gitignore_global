@@ -65,6 +65,9 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
+# Ignore VS Code files
+.vscode/*
+
 # Ignore Python-related files
 pyvenv.cfg
 .venv
