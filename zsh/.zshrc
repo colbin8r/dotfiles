@@ -141,6 +141,13 @@ unsetopt BG_NICE
 #alias python="python3.7"
 #alias py="python"
 #alias pip="python3.7 -m pip"
+# Prefer exa for instead of ls
+# https://github.com/ogham/exa
+# alias l="exa -l"
+# alias la="exa -la"
+# alias lr="exa -RFh -t modified"
+# alias lt="exa -lFh -t modified"
+# alias ll="exa -l"
 
 ######
 
