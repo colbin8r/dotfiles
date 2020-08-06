@@ -84,6 +84,7 @@ plugins=(
   thefuck
   zsh-z
   common-aliases
+  zsh-aliases-exa
   zsh-syntax-highlighting
   zsh-better-npm-completion
   zsh-nvm
