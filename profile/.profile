@@ -21,3 +21,5 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export HOMEBREW_NO_ANALYTICS=1
 
 export PATH=/usr/local/Cellar/openssl/1.0.2t/bin:$PATH
+
+export PATH="$HOME/.cargo/bin:$PATH"
