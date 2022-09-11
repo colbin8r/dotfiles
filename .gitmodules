@@ -25,3 +25,6 @@
 [submodule "zsh/zsh_custom/plugins/zsh-aliases-exa"]
 	path = zsh/zsh_custom/plugins/zsh-aliases-exa
 	url = https://github.com/DarrinTisdale/zsh-aliases-exa.git
+[submodule "zsh/zsh_custom/themes/powerlevel10k"]
+	path = zsh/zsh_custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git

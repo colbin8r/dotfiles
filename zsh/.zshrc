@@ -11,7 +11,8 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="avit"
 # ZSH_THEME="agnoster" # my favorite so far
 # ZSH_THEME="spaceship-prompt/spaceship" # a custom-installed theme
-ZSH_THEME="powerlevel9k/powerlevel9k" # a custom-installed theme
+# ZSH_THEME="powerlevel9k/powerlevel9k" # a custom-installed theme
+ZSH_THEME="powerlevel10k/powerlevel10k" # a custom-installed theme
 
 # powerlevel9k prompt theme settings
 # https://github.com/bhilburn/powerlevel9k
@@ -91,6 +92,7 @@ plugins=(
   zsh-nvm
   transfer
   kubectl
+  deno
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,7 +118,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 # export EDITOR='subl' # Sublime Text
-export EDITOR='code' # VS COde
+export EDITOR='code' # VS Code
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -134,7 +136,7 @@ alias zshconfig="nano ~/.zshrc"
 #alias zshreload="source ~/.zshrc"
 alias zshreload="exec $SHELL -l"
 alias ohmyzsh="nano ~/.oh-my-zsh"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias subl="sublime_text"
 # Above alias also uses
 unsetopt BG_NICE
@@ -149,11 +151,12 @@ unsetopt BG_NICE
 # alias lr="exa -RFh -t modified"
 # alias lt="exa -lFh -t modified"
 # alias ll="exa -l"
+alias flushdns="sudo killall -HUP mDNSResponder;sudo killall mDNSResponderHelper;sudo dscacheutil -flushcache"
 
 ######
 
 # Change start directory
-cd ~/dev
+# cd ~/dev
 
 # removes Windows paths
 # https://github.com/Microsoft/WSL/issues/1493#issuecomment-346294379
@@ -322,13 +325,19 @@ function extract () {
 # https://docs.expo.io/versions/latest/workflow/android-studio-emulator/
 export ANDROID_SDK=/Users/colbin8r/Library/Android/sdk
 export PATH=/Users/colbin8r/Library/Android/sdk/platform-tools:$PATH
-export PATH="/usr/local/sbin:$PATH"
+# export PATH="/usr/local/sbin:$PATH"
+#
+# http://johnborg.es/2019/04/android-setup-react-native.html
+# export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+# export ANDROID_HOME="/usr/local/share/android-sdk"
 
 # Use Parallels provider with Vagrant - always
 export VAGRANT_DEFAULT_PROVIDER=parallels
 
 # Add Cargo to PATH
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add iTerm2 integration
 source ~/.iterm2_shell_integration.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
