@@ -1,7 +1,7 @@
 [core]
 	excludesfile = /Users/colbin8r/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
-	editor = subl -n -w
+	editor = code
 [user]
 	email = colbyrogness@gmail.com
 	name = Colby Rogness
