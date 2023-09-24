@@ -344,6 +344,9 @@ export VAGRANT_DEFAULT_PROVIDER=parallels
 # Add Cargo to PATH
 # export PATH="$HOME/.cargo/bin:$PATH"
 
+# Add deno binaries to PATH
+export PATH="$HOME/.deno/bin:$PATH"
+
 # Add iTerm2 integration
 source ~/.iterm2_shell_integration.zsh
 
