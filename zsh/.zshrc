@@ -81,7 +81,20 @@ ZSH_CUSTOM=$HOME/zsh_custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    asdf
+    brew
+    common-aliases
+    docker
+    docker-compose
+    extract
+    # eza
+    gh
+    github
+    vscode
+    thefuck
+)
 # plugins=(
 #   git
 #   git-flow
@@ -99,6 +112,9 @@ plugins=(git)
 #   kubectl
 #   deno
 # )
+
+# Homebrew completions - must load before OMZ
+eval "$(brew shellenv)"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -143,3 +159,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Hermes Agent command
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
