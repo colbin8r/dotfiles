@@ -28,3 +28,6 @@
 [submodule "zsh/zsh_custom/themes/powerlevel10k"]
 	path = zsh/zsh_custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "asdf/.asdf/plugin-index"]
+	path = asdf/.asdf/plugin-index
+	url = https://github.com/asdf-vm/asdf-plugins.git
