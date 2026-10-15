@@ -1,2 +1,7 @@
+# ASDF
 asdf/.asdf/installs
+
+# ZSH
+zsh/zsh_custom/plugins
+zsh/zsh_custom/powerlevel9k
 
