@@ -94,6 +94,7 @@ plugins=(
     github
     vscode
     thefuck
+    zoxide
 )
 # plugins=(
 #   git
