@@ -5,3 +5,4 @@ asdf/.asdf/installs
 zsh/zsh_custom/plugins
 zsh/zsh_custom/powerlevel9k
 
+/asdf/.asdf/shims
